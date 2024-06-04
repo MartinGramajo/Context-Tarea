@@ -7,9 +7,9 @@ const MarvelScreen = () => {
 
   return (
     <div className="container">
-      <h1>Marvel Screens</h1>
+      <h1 className="text-center">Marvel</h1>
       <div>
-        <article className="py-5">
+        <article>
           <CartasComponent
             heroes={
               filteredMarvelHeroes.length ? filteredMarvelHeroes : marvelHeroes

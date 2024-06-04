@@ -7,8 +7,7 @@ const HomeScreen = () => {
 
   return (
     <section className="container">
-      <h1>HOME screens</h1>
-      <article className="py-5">
+      <article className="">
         <CartasComponent
           heroes={filteredHeroes.length ? filteredHeroes : heroes}
         />

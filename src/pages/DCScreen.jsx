@@ -6,8 +6,8 @@ const DCScreen = () => {
   const { filteredDcHeroes, dcHeroes } = useContext(UseHeroesContext);
   return (
     <div className="container">
-      <h1> DC Screens</h1>
-      <article className="py-5">
+      <h1 className="text-center"> DC Comics</h1>
+      <article>
         <CartasComponent
           heroes={filteredDcHeroes.length ? filteredDcHeroes : dcHeroes}
         />
