@@ -1,21 +1,21 @@
 import { useParams } from "react-router-dom";
+import signal from "../assets/signal.jpg";
 
 export default function HeroeDetalle({ heroes }) {
   const { id } = useParams();
-
-  if (!heroes) {
-    return <div>No heroes data available</div>;
-  }
-
   const hero = heroes.find((h) => h.id === id);
-  console.log("HeroeDetalle ~ hero:", hero);
 
   if (!hero) {
     return (
       <section className="container">
-        <div className="d-flex justify-content-center">
-          <h1> Heroe no encontrado </h1>
+        <div className="d-flex align-items-center">
+          <img
+            className="imagen-card-detalle"
+            src={signal}
+            alt="heroe no encontrado"
+          />
         </div>
+        <h6> Tu Hero viene en camino...</h6>
       </section>
     );
   }

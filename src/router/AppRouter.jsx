@@ -17,7 +17,7 @@ export const AppRouter = ({ heroes }) => {
       className={
         darkMode
           ? "container-dark d-flex flex-column min-vh-100 "
-          : "container-light d-flex flex-column min-vh-100 "
+          : "container-light d-flex flex-column min-vh-100"
       }
     >
       <BrowserRouter>

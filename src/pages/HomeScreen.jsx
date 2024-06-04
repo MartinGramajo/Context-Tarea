@@ -7,7 +7,7 @@ const HomeScreen = () => {
 
   return (
     <section className="container">
-      <article className="">
+      <article className="mt-5">
         <CartasComponent
           heroes={filteredHeroes.length ? filteredHeroes : heroes}
         />

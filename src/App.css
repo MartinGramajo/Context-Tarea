@@ -58,6 +58,10 @@ body {
   justify-content: center;
 }
 
+.swiper-3d {
+  perspective: 1200px;
+}
+
 /* Media query for tablets */
 @media (max-width: 768px) {
   .swiper {
@@ -73,8 +77,8 @@ body {
 /* Media query for mobile devices */
 @media (max-width: 480px) {
   .swiper {
-    width: 240px;
-    height: 500px;
+    width: 280px;
+    height: 550px;
   }
 
   .imagen-card {
@@ -84,6 +88,10 @@ body {
   .centrado {
     display: flex;
     justify-content: start;
+  }
+
+  .swiper-3d {
+    perspective: 700px !important;
   }
 }
 
