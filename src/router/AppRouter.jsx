@@ -6,8 +6,10 @@ import HomeScreen from "../pages/HomeScreen.jsx";
 import MarvelScreen from "../pages/MarvelScreen.jsx";
 import DCScreen from "../pages/DCScreen.jsx";
 import Footer from "../components/Footer.jsx";
+import HeroeDetalle from "../pages/HeroeDetalleScreen.jsx";
 
-export const AppRouter = () => {
+export const AppRouter = ({ heroes }) => {
+  // Ensure heroes is passed as a prop
   const { darkMode } = useContext(DarkModeContext);
 
   return (
@@ -24,6 +26,10 @@ export const AppRouter = () => {
           <Route path="/" element={<HomeScreen />} />
           <Route path="/marvel" element={<MarvelScreen />} />
           <Route path="/dc" element={<DCScreen />} />
+          <Route
+            path="/heroe/:id"
+            element={<HeroeDetalle heroes={heroes} />}
+          />{" "}
         </Routes>
         <Footer />
       </BrowserRouter>
