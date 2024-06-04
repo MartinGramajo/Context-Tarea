@@ -13,12 +13,12 @@ body {
 
 /*Switch darkmode*/
 .container-dark {
-  background-color: #050505;
+  background-color: #050505da;
   color: aliceblue;
 }
 
 .container-light {
-  background-color: #2c2946;
+  background-color: #54507b;
   color: aliceblue;
 }
 
@@ -41,12 +41,16 @@ body {
 
 .swiper {
   width: 600px;
-  height: 600px;
+  height: 650px;
 }
 
 .imagen-card {
   width: 350px;
   height: 450px;
+}
+
+.imagen-card-detalle {
+  width: 100%;
 }
 
 .centrado {
@@ -128,4 +132,65 @@ body {
 
 .swiper-slide:nth-child(10n) {
   background-color: rgb(54, 94, 77);
+}
+
+/* boton detalle  */
+.btnfos {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+}
+@media (min-width: 400px) {
+  .btnfos {
+    display: inline-block;
+    margin-right: 2.5em;
+  }
+  .btnfos:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  .btnfos:nth-of-type(even) {
+    margin-right: 2.5em;
+  }
+  .btnfos:nth-of-type(5) {
+    margin-right: 0;
+  }
+}
+
+.btnfos-4 {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+.btnfos-4 span {
+  z-index: 20;
+}
+.btnfos-4:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.2;
+  position: absolute;
+  top: -50px;
+  width: 50px;
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+  z-index: -10;
+}
+
+.btnfos-4:hover:after {
+  left: 120%;
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }

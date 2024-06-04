@@ -1,13 +1,9 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
-
-// import required modules
 import { EffectCards } from "swiper/modules";
 import { Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function CartasComponent({ heroes }) {
   return (
@@ -15,34 +11,32 @@ export default function CartasComponent({ heroes }) {
       <Swiper
         effect={"cards"}
         grabCursor={true}
+        loop={true}
         modules={[EffectCards]}
-        className="mySwiper "
+        className="mySwiper"
       >
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwiper"
-        >
-          {heroes.map((hero, id) => (
-            <SwiperSlide key={hero.id}>
-              <div className="container">
-                <div className="d-flex justify-content-between my-2">
-                  <div className="fs-12">#{id}</div>
-                  <div className="fs-12">{hero.publisher}</div>
-                </div>
-                <div className="text-center mt-4">
-                  <Image className="imagen-card" src={hero.url} alt="" />
-                </div>
-                <div className="d-flex justify-content-around flex-wrap">
-                  <h6>{hero.superhero}</h6>
-                  <h6 className="fs-12">{hero.characters}</h6>
-                </div>
-                <div></div>
+        {heroes.map((hero, id) => (
+          <SwiperSlide key={hero.id}>
+            <div className="container">
+              <div className="d-flex justify-content-between my-2">
+                <div className="fs-12">#{id}</div>
+                <div className="fs-12">{hero.publisher}</div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              <div className="text-center mt-4">
+                <Image className="imagen-card" src={hero.url} alt="" />
+              </div>
+              <div className="text-center">
+                <h6>{hero.superhero}</h6>
+                <h6 className="fs-12">{hero.characters}</h6>
+              </div>
+              <div className="d-flex justify-content-center ">
+                <Link to={`/heroe/${hero.id}`}>
+                  <a className="btnfos btnfos-4 text-center">Ver detalles</a>
+                </Link>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
