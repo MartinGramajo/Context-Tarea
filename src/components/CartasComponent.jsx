@@ -29,9 +29,12 @@ export default function CartasComponent({ heroes }) {
                 <h6>{hero.superhero}</h6>
                 <h6 className="fs-12">{hero.characters}</h6>
               </div>
-              <div className="d-flex justify-content-center ">
-                <Link to={`/heroe/${hero.id}`}>
-                  <a className="btnfos btnfos-4 text-center">Ver detalles</a>
+              <div className="text-center ">
+                <Link
+                  className="btnfos btnfos-4 text-decoration-none "
+                  to={`/heroe/${hero.id}`}
+                >
+                  Ver detalles
                 </Link>
               </div>
             </div>
