@@ -5,7 +5,7 @@ import { Form, Image } from "react-bootstrap";
 import night from "../assets/nightmode.png";
 
 const DarkModeSwitch = () => {
-  const { toggleDarkMode } = useContext(DarkModeContext);
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   const handleClick = () => {
     toggleDarkMode();
@@ -17,6 +17,7 @@ const DarkModeSwitch = () => {
         <Form.Check
           className="my-5"
           type="switch"
+          checked={darkMode}
           id="custom-switch"
           onClick={handleClick}
         />
